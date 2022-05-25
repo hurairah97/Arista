@@ -1,0 +1,48 @@
+CREATE TABLE IF NOT EXISTS `category` (
+  `cat_id` int(2) NOT NULL AUTO_INCREMENT,
+  `category` varchar(25) NOT NULL DEFAULT '',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`cat_id`, `category`) VALUES
+(1, 'Fruits'),
+(2, 'Colors'),
+(3, 'Games'),
+(4, 'Vehicles');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subcategory`
+--
+
+CREATE TABLE IF NOT EXISTS `subcategory` (
+  `cat_id` int(2) NOT NULL DEFAULT '0',
+  `subcategory` varchar(25) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `subcategory`
+--
+
+INSERT INTO `subcategory` (`cat_id`, `subcategory`) VALUES
+(1, 'Mango'),
+(1, 'Banana'),
+(1, 'Orange'),
+(1, 'Apple'),
+(2, 'Red'),
+(2, 'Blue'),
+(2, 'Green'),
+(2, 'Yellow'),
+(3, 'Cricket'),
+(3, 'Football'),
+(3, 'Baseball'),
+(3, 'Tennis'),
+(4, 'Cars'),
+(4, 'Trucks'),
+(4, 'Bikes'),
+(4, 'Train');
